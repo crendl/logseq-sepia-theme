@@ -6,4 +6,4 @@ The idea is for others to further develop this theme and get the pull request ap
 
 ## Screenshot
 
-
+https://github.com/crendl/logseq-sepia-theme/blob/master/scr.png
