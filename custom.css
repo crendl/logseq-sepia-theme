@@ -4,10 +4,13 @@
 	--ls-page-text-size: 1em;
 	--ls-page-title-size: 36px;
 	--ls-font-family: 'Inter';
-	--ls-main-content-max-width: 740px;
+	--ls-main-content-max-width: 810px;
 	--ls-main-content-max-width-wide: 100%;
+	--ls-scrollbar-width: 6px;						
 	--ls-border-radius-low: 4px;
 	--ls-border-radius-medium: 8px;
+	--ls-left-sidebar-width: 240px;
+	--ls-left-sidebar-nav-btn-size: 38px;								 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,10 +41,12 @@ html[data-theme='dark'] {
 	--ls-block-properties-background-color: #06323e;
 	--ls-page-properties-background-color: #02171d;
 	--ls-block-ref-link-text-color: #1a6376;
-	--ls-search-background-color: linear-gradient(to right,
-			#021c23 0,
-			#021b21 200px,
-			#002b36 100%);
+	--ls-search-background-color: linear-gradient(
+	to right,
+	#021c23 0,
+	#021b21 200px,
+	#002b36 100%
+	);
 	--ls-border-color: #0e5263;
 	--ls-secondary-border-color: #126277;
 	--ls-guideline-color: #0b4a5a;
@@ -85,61 +90,7 @@ html[data-theme='dark'] {
 }
 
 .white-theme,
-html[data-theme='light'] {
-	--ls-primary-background-color: #ffffff;
-	--ls-secondary-background-color: #f8f6f3;
-	--ls-tertiary-background-color: #f1eee8;
-	--ls-quaternary-background-color: #e8e5de;
-	--ls-table-tr-even-background-color: #f7f7f7;
-	--ls-active-primary-color: rgb(4, 85, 145);
-	--ls-active-secondary-color: #003761;
-	--ls-block-properties-background-color: #f5f3ee;
-	--ls-page-properties-background-color: #f5f3ee;
-	--ls-block-ref-link-text-color: #d8e1e8;
-	--ls-search-background-color: var(--ls-primary-background-color);
-	--ls-border-color: #ccc;
-	--ls-secondary-border-color: #e2e2e2;
-	--ls-guideline-color: rgba(46, 27, 5, 0.08);
-	--ls-menu-hover-color: var(--ls-a-chosen-bg);
-	--ls-primary-text-color: #433f38;
-	--ls-secondary-text-color: #161e2e;
-	--ls-title-text-color: var(--ls-primary-text-color);
-	--ls-link-text-color: #106ba3;
-	--ls-link-text-hover-color: #1a537c;
-	--ls-link-ref-text-color: #106ba3;
-	--ls-link-ref-text-hover-color: #1a537c;
-	--ls-tag-text-color: var(--ls-link-ref-text-color);
-	--ls-tag-text-hover-color: var(--ls-link-ref-text-hover-color);
-	--ls-slide-background-color: #fff;
-	--ls-block-bullet-border-color: #dedede;
-	--ls-block-bullet-color: rgba(67, 63, 56, 0.25);
-	--ls-block-highlight-color: #c0e6fd;
-	--ls-selection-background-color: #e4f2ff;
-	--ls-page-checkbox-color: #9dbbd8;
-	--ls-page-checkbox-border-color: var(--ls-page-checkbox-color);
-	--ls-page-blockquote-color: var(--ls-primary-text-color);
-	--ls-page-blockquote-bg-color: #fbfaf8;
-	--ls-page-blockquote-border-color: #799bbc;
-	--ls-page-inline-code-bg-color: #f7f7f7;
-	--ls-page-inline-code-color: var(--ls-primary-text-color);
-	--ls-scrollbar-foreground-color: rgba(0, 0, 0, 0.1);
-	--ls-scrollbar-background-color: rgba(0, 0, 0, 0.05);
-	--ls-scrollbar-thumb-hover-color: rgba(0, 0, 0, 0.2);
-	--ls-head-text-color: var(--ls-link-text-color);
-	--ls-cloze-text-color: #0000cd;
-	--ls-icon-color: #908e8b;
-	--ls-search-icon-color: var(--ls-icon-color);
-	--ls-a-chosen-bg: #f7f7f7;
-	--ls-right-sidebar-code-bg-color: var(--ls-secondary-background-color);
-	--color-level-1: var(--ls-secondary-background-color);
-	--color-level-2: var(--ls-tertiary-background-color);
-	--color-level-3: var(--ls-quaternary-background-color);
-	--color-level-4: #d0e6fa;
-	--color-level-5: #bbdaf6;
-}
-
-.sepia-theme,
-html[data-theme='sepia'] {
+html[data-theme='white'] {
 	--ls-primary-background-color: #f1eee8 !important;
 	--ls-secondary-background-color: #f7f7f7;
 	--ls-tertiary-background-color: #ede7e1;
@@ -193,13 +144,6 @@ html[data-theme='sepia'] {
 	--color-level-5: #9e9385;
 }
 
-/* Custom overrides due to hard-coded colors */
-/* Buttons */
-.bg-indigo-600,
-.bg-indigo-700 {
-	background-color: var(--ls-active-secondary-color) !important;
-}
-
 /* region Reset top elements */
 html {
 	font-family: var(--ls-font-family), Inter, sans-serif, system-ui,
@@ -242,6 +186,11 @@ textarea {
 	font-weight: inherit;
 	letter-spacing: inherit;
 	text-size-adjust: 100%;
+	  background: var(--ls-primary-background-color);
+}
+
+.dark-theme textarea {
+  background: var(--ls-tertiary-background-color);
 }
 
 ul {
@@ -748,10 +697,7 @@ li p:first-child,
 }
 
 li p:last-child,
-.block-body p:last-child,
-.block-body ul:last-child,
-.block-body ol:last-child,
-.block-body dl:last-child {
+.block-body p:last-child, .block-body ul:last-child, .block-body ol:last-child, .block-body dl:last-child {
 	margin-bottom: 0;
 }
 
@@ -867,10 +813,7 @@ li p:last-child,
 
 .aspect-ratio-21\/9 {
 	padding-top: 42.86%;
-}
 
-.footdef {
-	margin: 1rem 0;
 }
 
 .admonitionblock {
@@ -907,6 +850,32 @@ h1.title {
 	color: var(--ls-title-text-color, #222);
 	font-size: var(--ls-page-title-size, 36px);
 	font-weight: 600;
+}
+
+.title .page-icon {
+  margin-right: 12px;
+}
+
+.left-sidebar-inner .recent .page-icon,
+.left-sidebar-inner .favorites .page-icon {
+  margin-right: 8px;
+  width: 1.1em;
+  text-align: center;
+  display: inline-block;
+  color: #aaa;
+}
+
+.favorites li.favorite-item,
+.recent    li.recent-item {
+  margin: 0.1rem 0;
+}
+
+.left-sidebar-inner > .wrap {
+  height: 100%;
+}
+
+.left-sidebar-inner .flex-column-spacer {
+  flex: 1 1 0%;
 }
 
 .block-highlight,
@@ -988,9 +957,7 @@ a.chosen {
 }
 
 a.warning,
-span.warning,
-div.warning:not(.admonitionblock),
-p.warning {
+span.warning, div.warning:not(.admonitionblock), p.warning {
 	background: #f56565;
 	padding: 0.1em 0.4em;
 	border-radius: var(--ls-border-radius-low);
@@ -1075,6 +1042,7 @@ hr {
 .fade-link {
 	opacity: 0.6;
 	transition: 0.3s;
+	color: var(--ls-primary-text-color);								  
 }
 
 a.fade-link:hover {
@@ -1123,7 +1091,6 @@ mark {
 /* block references */
 
 .block-ref {
-	padding: 2px 5px;
 	display: inline;
 }
 
@@ -1179,10 +1146,12 @@ a.tooltip-priority {
 	border-color: var(--ls-primary-text-color);
 }
 
-a.page-op {
-	svg {
+#help-latex .katex-html {
+  text-align: right;
+}
+
+a.page-op svg {
 		transform: scale(0.9);
-	}
 }
 
 .search-more {
@@ -1194,6 +1163,7 @@ a.page-op {
 	background-color: var(--ls-quaternary-background-color);
 	padding: 2px 4px !important;
 	border-radius: 6px;
+	color: var(--ls-secondary-text-color);									
 }
 
 html[data-theme='light'] .keyboard-shortcut>code {
