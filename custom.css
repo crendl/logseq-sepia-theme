@@ -92,15 +92,15 @@ html[data-theme='dark'] {
 .white-theme,
 html[data-theme='white'] {
 	--ls-primary-background-color: #f1eee8 !important;
-	--ls-secondary-background-color: #f7f7f7;
+	--ls-secondary-background-color: #f8f6f3;
 	--ls-tertiary-background-color: #ede7e1;
 	/* --ls-tertiary-background-color: #e4dcd3; */
 	--ls-quaternary-background-color: #DCCDBC;
 	--ls-table-tr-even-background-color: #f7f7f7;
 	--ls-active-primary-color: #a79786;
 	--ls-active-secondary-color: #47423E;
-	--ls-block-properties-background-color: #f7f7f7;
-	--ls-page-properties-background-color: #f7f7f7;
+	--ls-block-properties-background-color: #f5f3ee;
+	--ls-page-properties-background-color: #f5f3ee;
 	--ls-block-ref-link-text-color: #e8e0d8;
 	--ls-search-background-color: var(--ls-primary-background-color);
 	--ls-border-color: #ccc;
