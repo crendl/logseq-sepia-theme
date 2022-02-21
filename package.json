@@ -1,12 +1,12 @@
 {
-    "name": "LogSeq Sepia Theme",
+    "name": "Sepia Theme",
     "author": "mschmidtkorth/crendl",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "description": "A sepia version of the default theme.",
     "logseq": {
       "themes": [
         {
-          "name": "LogSeq Sepia Theme",
+          "name": "Sepia Theme",
           "url": "./custom.css",
           "description": "A sepia version of the default theme."
         }
