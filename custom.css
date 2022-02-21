@@ -1181,3 +1181,30 @@ html[data-theme='dark'] .keyboard-shortcut>code {
 .overflow-y-scroll {
 	overflow-y: scroll;
 }
+
+/* remove shadows from cards and adjust height*/
+.shadow-xl {
+	box-shadow: none;
+	--tw-shadow: none;
+}
+
+.shadow-lg {
+	box-shadow: none;
+	--tw-shadow: none;
+}
+
+div[data-refs-self*='"card"'] {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+/* adjust color and width of bullet point scroll bar */
+.white-theme .block-children-left-border:hover {
+	width: 3px;
+	background-color: #e2ddd6;
+}
+
+.dark-theme .block-children-left-border:hover {
+	width: 3px;
+	background-color: #0b4a5a;
+}
