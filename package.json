@@ -1,7 +1,7 @@
 {
     "name": "Sepia Theme",
     "author": "mschmidtkorth/crendl",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "A sepia version of the default theme.",
     "logseq": {
       "themes": [
